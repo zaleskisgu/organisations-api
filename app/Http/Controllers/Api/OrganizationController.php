@@ -8,10 +8,8 @@ use App\Http\Requests\SearchNameRequest;
 use App\Http\Requests\SearchRadiusRequest;
 use App\Http\Resources\ApiResponse;
 use App\Http\Resources\OrganizationResource;
-use App\Models\Activity;
-use App\Models\Organization;
+use App\Services\OrganizationService;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 /**
  * @OA\Get(
@@ -52,14 +50,19 @@ use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
  */
 class OrganizationController extends Controller
 {
+    private OrganizationService $organizationService;
+
+    public function __construct(OrganizationService $organizationService)
+    {
+        $this->organizationService = $organizationService;
+    }
+
     /**
      * Получить организации в здании
      */
     public function getByBuilding(int $buildingId): JsonResponse
     {
-        $organizations = Organization::with(['phones', 'activities', 'building'])
-            ->where('building_id', $buildingId)
-            ->get();
+        $organizations = $this->organizationService->getByBuilding($buildingId);
 
         return ApiResponse::collection(OrganizationResource::collection($organizations), 'Организации в здании получены');
     }
@@ -95,11 +98,7 @@ class OrganizationController extends Controller
      */
     public function getByActivity(int $activityId): JsonResponse
     {
-        $organizations = Organization::with(['phones', 'activities', 'building'])
-            ->whereHas('activities', function ($query) use ($activityId) {
-                $query->where('activities.id', $activityId);
-            })
-            ->get();
+        $organizations = $this->organizationService->getByActivity($activityId);
 
         return ApiResponse::collection(OrganizationResource::collection($organizations), 'Организации по виду деятельности получены');
     }
@@ -151,29 +150,11 @@ class OrganizationController extends Controller
     {
         $validated = $request->validated();
 
-        $lat = $validated['latitude'];
-        $lng = $validated['longitude'];
-        $radius = $validated['radius'];
-
-        $organizations = Organization::with(['phones', 'activities', 'building'])
-            ->whereHas('building', function ($query) use ($lat, $lng, $radius) {
-                // Check if we're using SQLite (for testing)
-                if (config('database.default') === 'sqlite' || config('database.default') === 'testing') {
-                    // Simple bounding box calculation for SQLite
-                    $latDelta = $radius / 111.0; // Approximate km per degree latitude
-                    $lngDelta = $radius / (111.0 * cos(deg2rad($lat))); // Approximate km per degree longitude
-                    
-                    $query->whereBetween('latitude', [$lat - $latDelta, $lat + $latDelta])
-                          ->whereBetween('longitude', [$lng - $lngDelta, $lng + $lngDelta]);
-                } else {
-                    // Use Haversine formula for MySQL/PostgreSQL
-                    $query->whereRaw(
-                        '(6371 * acos(cos(radians(?)) * cos(radians(latitude)) * cos(radians(longitude) - radians(?)) + sin(radians(?)) * sin(radians(latitude)))) <= ?',
-                        [$lat, $lng, $lat, $radius]
-                    );
-                }
-            })
-            ->get();
+        $organizations = $this->organizationService->searchByRadius(
+            $validated['latitude'],
+            $validated['longitude'],
+            $validated['radius']
+        );
 
         return ApiResponse::collection(OrganizationResource::collection($organizations), 'Организации в радиусе найдены');
     }
@@ -232,17 +213,12 @@ class OrganizationController extends Controller
     {
         $validated = $request->validated();
 
-        $minLat = $validated['min_lat'];
-        $maxLat = $validated['max_lat'];
-        $minLng = $validated['min_lng'];
-        $maxLng = $validated['max_lng'];
-
-        $organizations = Organization::with(['phones', 'activities', 'building'])
-            ->whereHas('building', function ($query) use ($minLat, $maxLat, $minLng, $maxLng) {
-                $query->whereBetween('latitude', [$minLat, $maxLat])
-                    ->whereBetween('longitude', [$minLng, $maxLng]);
-            })
-            ->get();
+        $organizations = $this->organizationService->searchByArea(
+            $validated['min_lat'],
+            $validated['max_lat'],
+            $validated['min_lng'],
+            $validated['max_lng']
+        );
 
         return ApiResponse::collection(OrganizationResource::collection($organizations), 'Организации в области найдены');
     }
@@ -274,7 +250,7 @@ class OrganizationController extends Controller
      */
     public function show(int $id): JsonResponse
     {
-        $organization = Organization::with(['phones', 'activities', 'building'])->find($id);
+        $organization = $this->organizationService->findById($id);
 
         if (!$organization) {
             return ApiResponse::notFound('Организация не найдена');
@@ -314,21 +290,7 @@ class OrganizationController extends Controller
      */
     public function searchByActivityTree(int $activityId): JsonResponse
     {
-        $activity = Activity::find($activityId);
-        
-        if (!$activity) {
-            return ApiResponse::collection(OrganizationResource::collection(collect()), 'Организации по дереву деятельности найдены');
-        }
-
-        // Получаем все дочерние ID
-        $childIds = $this->getChildActivityIds($activityId);
-        $allIds = array_merge([$activityId], $childIds);
-
-        $organizations = Organization::with(['phones', 'activities', 'building'])
-            ->whereHas('activities', function ($query) use ($allIds) {
-                $query->whereIn('activities.id', $allIds);
-            })
-            ->get();
+        $organizations = $this->organizationService->searchByActivityTree($activityId);
 
         return ApiResponse::collection(OrganizationResource::collection($organizations), 'Организации по дереву деятельности найдены');
     }
@@ -366,26 +328,8 @@ class OrganizationController extends Controller
     {
         $validated = $request->validated();
 
-        $organizations = Organization::with(['phones', 'activities', 'building'])
-            ->where('name', 'like', '%' . $validated['name'] . '%')
-            ->get();
+        $organizations = $this->organizationService->searchByName($validated['name']);
 
         return ApiResponse::collection(OrganizationResource::collection($organizations), 'Организации по названию найдены');
-    }
-
-    /**
-     * Получить все дочерние ID видов деятельности
-     */
-    private function getChildActivityIds(int $parentId): array
-    {
-        $childIds = [];
-        $children = Activity::where('parent_id', $parentId)->get();
-
-        foreach ($children as $child) {
-            $childIds[] = $child->id;
-            $childIds = array_merge($childIds, $this->getChildActivityIds($child->id));
-        }
-
-        return $childIds;
     }
 } 

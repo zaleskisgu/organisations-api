@@ -1,65 +1,3 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
 # 🏢 Organizations API
 
 REST API приложение для работы со справочником организаций, зданий и видов деятельности.
@@ -148,6 +86,17 @@ X-API-Key: test-api-key-12345
 
 ## 🏗️ Архитектура
 
+### Слои приложения
+```
+Controllers (HTTP Layer)
+    ↓
+Services (Business Logic Layer)
+    ↓
+Models (Data Access Layer)
+    ↓
+Database
+```
+
 ### База данных
 ```
 organizations
@@ -174,6 +123,7 @@ phones
 - **Testing**: PHPUnit + Custom test suite
 - **Static Analysis**: Larastan (PHPStan)
 - **Documentation**: Swagger UI + OpenAPI 3.0
+- **Architecture**: Service Layer Pattern
 
 ## 🧪 Тестирование
 
@@ -182,7 +132,7 @@ phones
 # Запуск всех тестов
 docker-compose exec app php artisan test
 
-# Результат: 13/13 тестов пройдены ✅
+# Результат: 14/14 тестов пройдены ✅
 ```
 
 ### Ручные тесты
@@ -204,16 +154,22 @@ docker-compose exec app ./vendor/bin/phpstan analyse
 ## 📊 Результаты тестирования
 
 ### Общая статистика
-- **Всего тестов**: 44
-- **Пройдено**: 44 (100%)
+- **Всего тестов**: 45
+- **Пройдено**: 45 (100%)
 - **Провалено**: 0 (0%)
 
 ### Детализация
-- **Автоматизированные тесты**: 13/13 ✅
+- **Автоматизированные тесты**: 14/14 ✅
 - **Ручные тесты**: 31/31 ✅
 - **Статический анализ**: 0 ошибок ✅
 
 ## 🎯 Ключевые особенности
+
+### 🏗️ Архитектурные принципы
+- **Service Layer Pattern**: Разделение бизнес-логики и HTTP слоя
+- **Single Responsibility**: Каждый класс имеет одну ответственность
+- **Dependency Injection**: Внедрение зависимостей через конструктор
+- **Clean Code**: Читаемый и поддерживаемый код
 
 ### Геопространственные запросы
 - **Радиусный поиск**: Haversine формула для точного расчета расстояний
@@ -234,9 +190,11 @@ docker-compose exec app ./vendor/bin/phpstan analyse
 organizations-api/
 ├── app/
 │   ├── Http/Controllers/Api/
-│   │   └── OrganizationController.php
+│   │   └── OrganizationController.php    # HTTP слой (только обработка запросов)
 │   ├── Http/Middleware/
 │   │   └── ApiKeyMiddleware.php
+│   ├── Services/
+│   │   └── OrganizationService.php      # Бизнес-логика
 │   └── Models/
 │       ├── Organization.php
 │       ├── Building.php
@@ -327,6 +285,8 @@ curl -H "X-API-Key: test-api-key-12345" \
 ✅ **Готовая документация**  
 ✅ **Docker контейнеризация**  
 ✅ **Статический анализ пройден**  
+✅ **Архитектурный рефакторинг завершен**  
+✅ **Service Layer Pattern внедрен**  
 ✅ **Готов к продакшн использованию**
 
 ## 🤝 Разработка
@@ -349,10 +309,11 @@ docker-compose logs -f app
 
 ### Добавление новых endpoints
 
-1. Создать метод в `OrganizationController`
-2. Добавить маршрут в `routes/api.php`
-3. Написать тесты в `tests/Feature/ApiTest.php`
-4. Обновить документацию
+1. Создать метод в `OrganizationService` (бизнес-логика)
+2. Создать метод в `OrganizationController` (HTTP обработка)
+3. Добавить маршрут в `routes/api.php`
+4. Написать тесты в `tests/Feature/ApiTest.php`
+5. Обновить документацию
 
 ## 📄 Лицензия
 
