@@ -15,9 +15,18 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
+        // Создаем тестового пользователя только если его нет
+        User::firstOrCreate([
             'email' => 'test@example.com',
+        ], [
+            'name' => 'Test User',
+            'password' => bcrypt('password'),
+        ]);
+
+        $this->call([
+            ActivitySeeder::class,
+            BuildingSeeder::class,
+            OrganizationSeeder::class,
         ]);
     }
 }

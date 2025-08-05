@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: organizations-api-app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+      - ./docker/php.ini:/usr/local/etc/php/conf.d/custom.ini
+    networks:
+      - organizations-api
+
+  webserver:
+    image: nginx:alpine
+    container_name: organizations-api-nginx
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - organizations-api
+
+  db:
+    image: mysql:8.0
+    container_name: organizations-api-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: organizations_api
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: password
+      MYSQL_USER: organizations_user
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - organizations-api
+
+networks:
+  organizations-api:
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local 
