@@ -98,8 +98,8 @@ docker-compose exec app php artisan migrate:fresh --seed
 
 ### Доступные URL
 - **API Base**: `http://localhost:8000/api`
-- **Documentation**: `http://localhost:8000/api/documentation`
-- **JSON Docs**: `http://localhost:8000/api/docs`
+- **Swagger UI**: `http://localhost:8000/api/documentation` - Интерактивная документация
+- **JSON Docs**: `http://localhost:8000/api/docs` - OpenAPI спецификация
 
 ## 🔐 Аутентификация
 
@@ -107,6 +107,28 @@ docker-compose exec app php artisan migrate:fresh --seed
 ```
 X-API-Key: test-api-key-12345
 ```
+
+## 📚 Swagger UI - Интерактивная документация
+
+### 🎯 Возможности
+- **🔐 Встроенная авторизация** - Автоматическое добавление API ключа
+- **🧪 Интерактивное тестирование** - Тестируйте API прямо в браузере
+- **📖 Живая документация** - Синхронизирована с кодом
+- **🎨 Современный интерфейс** - Красивый и удобный дизайн
+
+### 🚀 Как использовать
+1. Откройте `http://localhost:8000/api/documentation`
+2. Введите API ключ: `test-api-key-12345`
+3. Нажмите "Authorize"
+4. Выберите любой endpoint и нажмите "Try it out"
+5. Заполните параметры и выполните запрос
+
+### 📋 Что включено
+- ✅ Все 8 API endpoints
+- ✅ 4 схемы данных (Organization, Building, Activity, OrganizationPhone)
+- ✅ Автоматическая валидация параметров
+- ✅ Примеры запросов и ответов
+- ✅ Описание всех кодов ответов
 
 ## 📚 API Endpoints
 
@@ -151,7 +173,7 @@ phones
 - **Containerization**: Docker + Docker Compose
 - **Testing**: PHPUnit + Custom test suite
 - **Static Analysis**: Larastan (PHPStan)
-- **Documentation**: Custom HTML + JSON
+- **Documentation**: Swagger UI + OpenAPI 3.0
 
 ## 🧪 Тестирование
 

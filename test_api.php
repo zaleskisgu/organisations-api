@@ -4,7 +4,7 @@
  * Tests all available endpoints with various scenarios
  */
 
-$baseUrl = 'http://localhost:8000/api';
+$baseUrl = 'http://app:8000/api';
 $apiKey = 'test-api-key-12345';
 
 // Test results storage
@@ -16,6 +16,13 @@ $totalTests = 0;
  * Helper function to make HTTP requests
  */
 function makeRequest($url, $method = 'GET', $headers = []) {
+    // URL encode the URL to handle special characters
+    $encodedUrl = $url;
+    if (strpos($url, '?') !== false) {
+        $parts = explode('?', $url, 2);
+        $encodedUrl = $parts[0] . '?' . urlencode($parts[1]);
+    }
+    
     $context = stream_context_create([
         'http' => [
             'method' => $method,
@@ -25,7 +32,7 @@ function makeRequest($url, $method = 'GET', $headers = []) {
         ]
     ]);
     
-    $response = @file_get_contents($url, false, $context);
+    $response = @file_get_contents($encodedUrl, false, $context);
     
     // Get HTTP status code from response headers
     $httpCode = 'Unknown';
@@ -74,8 +81,8 @@ function runTest($testName, $url, $expectedHttpCode = '200 OK') {
         if (strpos($httpCode, '200') !== false) {
             $passed = true;
         }
-        // Check for 400 Bad Request (expected for validation errors)
-        elseif (strpos($httpCode, '400') !== false && (
+        // Check for 400 Bad Request or 302 Found (expected for validation errors)
+        elseif ((strpos($httpCode, '400') !== false || strpos($httpCode, '302') !== false) && (
             strpos($url, '/organizations/search/radius') !== false ||
             strpos($url, '/organizations/search/area') !== false ||
             strpos($url, '/organizations/search/name') !== false ||

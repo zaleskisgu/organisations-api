@@ -1910,14 +1910,14 @@ return [
   array (
     0 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Call to an undefined static method App\\Models\\Building::find().',
+       'message' => 'Call to an undefined static method App\\Models\\Activity::find().',
        'file' => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
-       'line' => 50,
+       'line' => 317,
        'canBeIgnored' => true,
        'filePath' => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 50,
+       'nodeLine' => 317,
        'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
        'identifier' => 'staticMethod.notFound',
        'metadata' => 
@@ -1927,16 +1927,53 @@ return [
     )),
     1 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Call to an undefined static method App\\Models\\Activity::find().',
+       'message' => 'Call to an undefined static method App\\Models\\Activity::where().',
        'file' => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
-       'line' => 96,
+       'line' => 382,
        'canBeIgnored' => true,
        'filePath' => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 96,
+       'nodeLine' => 382,
        'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
        'identifier' => 'staticMethod.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+  ),
+  '/var/www/app/Http/Resources/ActivityResource.php' => 
+  array (
+    0 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\ActivityResource::$id.',
+       'file' => '/var/www/app/Http/Resources/ActivityResource.php',
+       'line' => 18,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/ActivityResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 18,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    1 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\ActivityResource::$name.',
+       'file' => '/var/www/app/Http/Resources/ActivityResource.php',
+       'line' => 19,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/ActivityResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 19,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
        'metadata' => 
       array (
       ),
@@ -1944,16 +1981,16 @@ return [
     )),
     2 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Call to an undefined static method App\\Models\\Activity::find().',
-       'file' => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
-       'line' => 325,
+       'message' => 'Access to an undefined property App\\Http\\Resources\\ActivityResource::$parent_id.',
+       'file' => '/var/www/app/Http/Resources/ActivityResource.php',
+       'line' => 20,
        'canBeIgnored' => true,
-       'filePath' => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
+       'filePath' => '/var/www/app/Http/Resources/ActivityResource.php',
        'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 325,
-       'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
-       'identifier' => 'staticMethod.notFound',
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 20,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
        'metadata' => 
       array (
       ),
@@ -1961,16 +1998,16 @@ return [
     )),
     3 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Call to an undefined static method App\\Models\\Organization::whereHas().',
-       'file' => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
-       'line' => 337,
+       'message' => 'Access to an undefined property App\\Http\\Resources\\ActivityResource::$level.',
+       'file' => '/var/www/app/Http/Resources/ActivityResource.php',
+       'line' => 21,
        'canBeIgnored' => true,
-       'filePath' => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
+       'filePath' => '/var/www/app/Http/Resources/ActivityResource.php',
        'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 337,
-       'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
-       'identifier' => 'staticMethod.notFound',
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 21,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
        'metadata' => 
       array (
       ),
@@ -1978,14 +2015,312 @@ return [
     )),
     4 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Activity::$children.',
-       'file' => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
-       'line' => 425,
+       'message' => 'Access to an undefined property App\\Http\\Resources\\ActivityResource::$created_at.',
+       'file' => '/var/www/app/Http/Resources/ActivityResource.php',
+       'line' => 25,
        'canBeIgnored' => true,
-       'filePath' => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
+       'filePath' => '/var/www/app/Http/Resources/ActivityResource.php',
        'traitFilePath' => NULL,
        'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 425,
+       'nodeLine' => 25,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    5 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\ActivityResource::$updated_at.',
+       'file' => '/var/www/app/Http/Resources/ActivityResource.php',
+       'line' => 26,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/ActivityResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 26,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+  ),
+  '/var/www/app/Http/Resources/BuildingResource.php' => 
+  array (
+    0 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\BuildingResource::$id.',
+       'file' => '/var/www/app/Http/Resources/BuildingResource.php',
+       'line' => 18,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/BuildingResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 18,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    1 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\BuildingResource::$address.',
+       'file' => '/var/www/app/Http/Resources/BuildingResource.php',
+       'line' => 19,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/BuildingResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 19,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    2 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\BuildingResource::$latitude.',
+       'file' => '/var/www/app/Http/Resources/BuildingResource.php',
+       'line' => 20,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/BuildingResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 20,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    3 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\BuildingResource::$longitude.',
+       'file' => '/var/www/app/Http/Resources/BuildingResource.php',
+       'line' => 21,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/BuildingResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 21,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    4 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\BuildingResource::$created_at.',
+       'file' => '/var/www/app/Http/Resources/BuildingResource.php',
+       'line' => 23,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/BuildingResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 23,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    5 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\BuildingResource::$updated_at.',
+       'file' => '/var/www/app/Http/Resources/BuildingResource.php',
+       'line' => 24,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/BuildingResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 24,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+  ),
+  '/var/www/app/Http/Resources/OrganizationPhoneResource.php' => 
+  array (
+    0 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\OrganizationPhoneResource::$id.',
+       'file' => '/var/www/app/Http/Resources/OrganizationPhoneResource.php',
+       'line' => 18,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/OrganizationPhoneResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 18,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    1 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\OrganizationPhoneResource::$organization_id.',
+       'file' => '/var/www/app/Http/Resources/OrganizationPhoneResource.php',
+       'line' => 19,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/OrganizationPhoneResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 19,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    2 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\OrganizationPhoneResource::$phone.',
+       'file' => '/var/www/app/Http/Resources/OrganizationPhoneResource.php',
+       'line' => 20,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/OrganizationPhoneResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 20,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    3 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\OrganizationPhoneResource::$created_at.',
+       'file' => '/var/www/app/Http/Resources/OrganizationPhoneResource.php',
+       'line' => 22,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/OrganizationPhoneResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 22,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    4 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\OrganizationPhoneResource::$updated_at.',
+       'file' => '/var/www/app/Http/Resources/OrganizationPhoneResource.php',
+       'line' => 23,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/OrganizationPhoneResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 23,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+  ),
+  '/var/www/app/Http/Resources/OrganizationResource.php' => 
+  array (
+    0 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\OrganizationResource::$id.',
+       'file' => '/var/www/app/Http/Resources/OrganizationResource.php',
+       'line' => 18,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/OrganizationResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 18,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    1 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\OrganizationResource::$name.',
+       'file' => '/var/www/app/Http/Resources/OrganizationResource.php',
+       'line' => 19,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/OrganizationResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 19,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    2 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\OrganizationResource::$building_id.',
+       'file' => '/var/www/app/Http/Resources/OrganizationResource.php',
+       'line' => 20,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/OrganizationResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 20,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    3 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\OrganizationResource::$created_at.',
+       'file' => '/var/www/app/Http/Resources/OrganizationResource.php',
+       'line' => 24,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/OrganizationResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 24,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    4 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Http\\Resources\\OrganizationResource::$updated_at.',
+       'file' => '/var/www/app/Http/Resources/OrganizationResource.php',
+       'line' => 25,
+       'canBeIgnored' => true,
+       'filePath' => '/var/www/app/Http/Resources/OrganizationResource.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 25,
        'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
        'identifier' => 'property.notFound',
        'metadata' => 
@@ -2002,6 +2337,78 @@ return [
 	'unmatchedLineIgnores' => array (
 ),
 	'collectedDataCallback' => static function (): array { return array (
+  '/var/www/app/Http/Requests/SearchAreaRequest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Http\\Requests\\SearchAreaRequest',
+        1 => 'authorize',
+        2 => 'App\\Http\\Requests\\SearchAreaRequest',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Http\\Requests\\SearchAreaRequest',
+        1 => 'rules',
+        2 => 'App\\Http\\Requests\\SearchAreaRequest',
+      ),
+      2 => 
+      array (
+        0 => 'App\\Http\\Requests\\SearchAreaRequest',
+        1 => 'messages',
+        2 => 'App\\Http\\Requests\\SearchAreaRequest',
+      ),
+    ),
+  ),
+  '/var/www/app/Http/Requests/SearchNameRequest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Http\\Requests\\SearchNameRequest',
+        1 => 'authorize',
+        2 => 'App\\Http\\Requests\\SearchNameRequest',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Http\\Requests\\SearchNameRequest',
+        1 => 'rules',
+        2 => 'App\\Http\\Requests\\SearchNameRequest',
+      ),
+      2 => 
+      array (
+        0 => 'App\\Http\\Requests\\SearchNameRequest',
+        1 => 'messages',
+        2 => 'App\\Http\\Requests\\SearchNameRequest',
+      ),
+    ),
+  ),
+  '/var/www/app/Http/Requests/SearchRadiusRequest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Http\\Requests\\SearchRadiusRequest',
+        1 => 'authorize',
+        2 => 'App\\Http\\Requests\\SearchRadiusRequest',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Http\\Requests\\SearchRadiusRequest',
+        1 => 'rules',
+        2 => 'App\\Http\\Requests\\SearchRadiusRequest',
+      ),
+      2 => 
+      array (
+        0 => 'App\\Http\\Requests\\SearchRadiusRequest',
+        1 => 'messages',
+        2 => 'App\\Http\\Requests\\SearchRadiusRequest',
+      ),
+    ),
+  ),
   '/var/www/app/Models/Activity.php' => 
   array (
     'PHPStan\\Rules\\Traits\\TraitUseCollector' => 
@@ -2086,9 +2493,30 @@ return [
   ),
 ); },
 	'dependencies' => array (
+  '/var/www/app/Exceptions/Handler.php' => 
+  array (
+    'fileHash' => '0d6abd7e5b62c8e46d96d04605e65fe4e2e451c7',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/var/www/app/Http/Controllers/Api/BuildingController.php' => 
+  array (
+    'fileHash' => '40ff364c49df39e46df0fdf770ce6e68259cbeae',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/var/www/app/Http/Controllers/Api/OpenApiSpec.php' => 
+  array (
+    'fileHash' => '746cdf020690268423003d83584c8f732f507e1f',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
   '/var/www/app/Http/Controllers/Api/OrganizationController.php' => 
   array (
-    'fileHash' => '956fcc53118c28ebd534e8eb57edc873a7fde8a8',
+    'fileHash' => '87dc28ec927c279c1bbfabb5dfbffafb531335b1',
     'dependentFiles' => 
     array (
     ),
@@ -2098,8 +2526,9 @@ return [
     'fileHash' => 'a33a5105f92c73a309c9f8a549905dcdf6dccbae',
     'dependentFiles' => 
     array (
-      0 => '/var/www/app/Http/Controllers/Api/DocumentationController.php',
-      1 => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
+      0 => '/var/www/app/Http/Controllers/Api/BuildingController.php',
+      1 => '/var/www/app/Http/Controllers/Api/DocumentationController.php',
+      2 => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
     ),
   ),
   '/var/www/app/Http/Middleware/ApiKeyMiddleware.php' => 
@@ -2107,6 +2536,75 @@ return [
     'fileHash' => '7fdc194367836085b1734d94d6b7656b07653ea9',
     'dependentFiles' => 
     array (
+    ),
+  ),
+  '/var/www/app/Http/Requests/SearchAreaRequest.php' => 
+  array (
+    'fileHash' => '1cc9845e23a02f29d2bfd3c5e10ca1fd16382daf',
+    'dependentFiles' => 
+    array (
+      0 => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
+    ),
+  ),
+  '/var/www/app/Http/Requests/SearchNameRequest.php' => 
+  array (
+    'fileHash' => '5eb92e2b3cc76b8e058e14598880c93ac4c9da88',
+    'dependentFiles' => 
+    array (
+      0 => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
+    ),
+  ),
+  '/var/www/app/Http/Requests/SearchRadiusRequest.php' => 
+  array (
+    'fileHash' => '331a3007486c257370ebd82d519ec92791026468',
+    'dependentFiles' => 
+    array (
+      0 => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
+    ),
+  ),
+  '/var/www/app/Http/Resources/ActivityResource.php' => 
+  array (
+    'fileHash' => '7470560d59cc64c025899d8d6b62f141f29d34e2',
+    'dependentFiles' => 
+    array (
+      0 => '/var/www/app/Http/Resources/OrganizationResource.php',
+    ),
+  ),
+  '/var/www/app/Http/Resources/ApiResponse.php' => 
+  array (
+    'fileHash' => '22668f88e3103661a524f9eb3f9eb80e7325c798',
+    'dependentFiles' => 
+    array (
+      0 => '/var/www/app/Http/Controllers/Api/BuildingController.php',
+      1 => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
+    ),
+  ),
+  '/var/www/app/Http/Resources/BuildingResource.php' => 
+  array (
+    'fileHash' => '2030defa806dee1ea42e186ef34cc7d623df374e',
+    'dependentFiles' => 
+    array (
+      0 => '/var/www/app/Http/Controllers/Api/BuildingController.php',
+      1 => '/var/www/app/Http/Resources/OrganizationResource.php',
+    ),
+  ),
+  '/var/www/app/Http/Resources/OrganizationPhoneResource.php' => 
+  array (
+    'fileHash' => 'ca5f499e934e0c8878076935739a3dd9d2119cc2',
+    'dependentFiles' => 
+    array (
+      0 => '/var/www/app/Http/Resources/OrganizationResource.php',
+    ),
+  ),
+  '/var/www/app/Http/Resources/OrganizationResource.php' => 
+  array (
+    'fileHash' => '8f3c532487e52c820ac9f815276013e2d60d5c71',
+    'dependentFiles' => 
+    array (
+      0 => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
+      1 => '/var/www/app/Http/Resources/ActivityResource.php',
+      2 => '/var/www/app/Http/Resources/BuildingResource.php',
+      3 => '/var/www/app/Http/Resources/OrganizationPhoneResource.php',
     ),
   ),
   '/var/www/app/Models/Activity.php' => 
@@ -2123,7 +2621,7 @@ return [
     'fileHash' => 'c8b0befddce8752c20bdc5f3c8b177fafc1bebaa',
     'dependentFiles' => 
     array (
-      0 => '/var/www/app/Http/Controllers/Api/OrganizationController.php',
+      0 => '/var/www/app/Http/Controllers/Api/BuildingController.php',
       1 => '/var/www/app/Models/Organization.php',
     ),
   ),
@@ -2169,7 +2667,7 @@ return [
   ),
   '/var/www/tests/Feature/ApiTest.php' => 
   array (
-    'fileHash' => 'ffe95221f7a78cea456f32f4e2916b33fc927f62',
+    'fileHash' => '7953cee7d2c3411e0296fd03b448a261b7deb336',
     'dependentFiles' => 
     array (
     ),
@@ -2192,12 +2690,329 @@ return [
   ),
 ),
 	'exportedNodesCallback' => static function (): array { return array (
+  '/var/www/app/Exceptions/Handler.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Exceptions\\Handler',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Foundation\\Exceptions\\Handler',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'dontFlash',
+          ),
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * The list of the inputs that are never flashed to the session on validation exceptions.
+     *
+     * @var array<int, string>
+     */',
+             'namespace' => 'App\\Exceptions',
+             'uses' => 
+            array (
+              'exceptionhandler' => 'Illuminate\\Foundation\\Exceptions\\Handler',
+              'validationexception' => 'Illuminate\\Validation\\ValidationException',
+              'throwable' => 'Throwable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'type' => NULL,
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'register',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Register the exception handling callbacks for the application.
+     */',
+             'namespace' => 'App\\Exceptions',
+             'uses' => 
+            array (
+              'exceptionhandler' => 'Illuminate\\Foundation\\Exceptions\\Handler',
+              'validationexception' => 'Illuminate\\Validation\\ValidationException',
+              'throwable' => 'Throwable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Http/Controllers/Api/BuildingController.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Controllers\\Api\\BuildingController',
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * @OA\\Get(
+ *     path="/buildings",
+ *     summary="Получить все здания",
+ *     tags={"Buildings"},
+ *     security={{"api_key":{}}},
+ *     @OA\\Response(
+ *         response=200,
+ *         description="Список всех зданий",
+ *         @OA\\JsonContent(
+ *             type="object",
+ *             @OA\\Property(property="success", type="boolean", example=true),
+ *             @OA\\Property(
+ *                 property="data",
+ *                 type="array",
+ *                 @OA\\Items(ref="#/components/schemas/Building")
+ *             )
+ *         )
+ *     ),
+ *     @OA\\Response(
+ *         response=401,
+ *         description="Unauthorized"
+ *     )
+ * )
+ */',
+         'namespace' => 'App\\Http\\Controllers\\Api',
+         'uses' => 
+        array (
+          'controller' => 'App\\Http\\Controllers\\Controller',
+          'apiresponse' => 'App\\Http\\Resources\\ApiResponse',
+          'buildingresource' => 'App\\Http\\Resources\\BuildingResource',
+          'building' => 'App\\Models\\Building',
+          'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+          'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'App\\Http\\Controllers\\Controller',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'index',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Получить все здания с организациями
+     */',
+             'namespace' => 'App\\Http\\Controllers\\Api',
+             'uses' => 
+            array (
+              'controller' => 'App\\Http\\Controllers\\Controller',
+              'apiresponse' => 'App\\Http\\Resources\\ApiResponse',
+              'buildingresource' => 'App\\Http\\Resources\\BuildingResource',
+              'building' => 'App\\Models\\Building',
+              'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+              'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Http\\JsonResponse',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Http/Controllers/Api/OpenApiSpec.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Controllers\\Api\\OpenApiSpec',
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * @OA\\Info(
+ *     title="Organizations API",
+ *     version="1.0.0",
+ *     description="API для работы с организациями, зданиями и видами деятельности",
+ *     @OA\\Contact(
+ *         email="admin@example.com",
+ *         name="API Support"
+ *     )
+ * )
+ * 
+ * @OA\\Server(
+ *     url="http://localhost:8000/api",
+ *     description="Local API Server"
+ * )
+ * 
+ * @OA\\SecurityScheme(
+ *     securityScheme="api_key",
+ *     type="apiKey",
+ *     in="header",
+ *     name="X-API-Key"
+ * )
+ */',
+         'namespace' => 'App\\Http\\Controllers\\Api',
+         'uses' => 
+        array (
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
   '/var/www/app/Http/Controllers/Api/OrganizationController.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
        'name' => 'App\\Http\\Controllers\\Api\\OrganizationController',
-       'phpDoc' => NULL,
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * @OA\\Get(
+ *     path="/organizations/building/{buildingId}",
+ *     summary="Получить организации в здании",
+ *     description="Получить список всех организаций в конкретном здании",
+ *     tags={"Organizations"},
+ *     security={{"api_key":{}}},
+ *     @OA\\Parameter(
+ *         name="buildingId",
+ *         in="path",
+ *         description="ID здания",
+ *         required=true,
+ *         @OA\\Schema(type="integer")
+ *     ),
+ *     @OA\\Response(
+ *         response=200,
+ *         description="Успешный ответ",
+ *         @OA\\JsonContent(
+ *             type="object",
+ *             @OA\\Property(property="success", type="boolean", example=true),
+ *             @OA\\Property(
+ *                 property="data",
+ *                 type="array",
+ *                 @OA\\Items(ref="#/components/schemas/Organization")
+ *             )
+ *         )
+ *     ),
+ *     @OA\\Response(
+ *         response=401,
+ *         description="Неверный API ключ"
+ *     ),
+ *     @OA\\Response(
+ *         response=404,
+ *         description="Здание не найдено"
+ *     )
+ * )
+ */',
+         'namespace' => 'App\\Http\\Controllers\\Api',
+         'uses' => 
+        array (
+          'controller' => 'App\\Http\\Controllers\\Controller',
+          'searcharearequest' => 'App\\Http\\Requests\\SearchAreaRequest',
+          'searchnamerequest' => 'App\\Http\\Requests\\SearchNameRequest',
+          'searchradiusrequest' => 'App\\Http\\Requests\\SearchRadiusRequest',
+          'apiresponse' => 'App\\Http\\Resources\\ApiResponse',
+          'organizationresource' => 'App\\Http\\Resources\\OrganizationResource',
+          'activity' => 'App\\Models\\Activity',
+          'organization' => 'App\\Models\\Organization',
+          'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+          'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
        'abstract' => false,
        'final' => false,
        'extends' => 'App\\Http\\Controllers\\Controller',
@@ -2218,47 +3033,21 @@ return [
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Получить список всех организаций в конкретном здании
-     * 
-     * @OA\\Get(
-     *     path="/api/organizations/building/{buildingId}",
-     *     summary="Получить организации в здании",
-     *     tags={"Organizations"},
-     *     security={{"apiKey":{}}},
-     *     @OA\\Parameter(
-     *         name="buildingId",
-     *         in="path",
-     *         required=true,
-     *         description="ID здания",
-     *         @OA\\Schema(type="integer")
-     *     ),
-     *     @OA\\Response(
-     *         response=200,
-     *         description="Успешный ответ",
-     *         @OA\\JsonContent(
-     *             @OA\\Property(property="success", type="boolean", example=true),
-     *             @OA\\Property(property="data", type="array", @OA\\Items(ref="#/components/schemas/Organization"))
-     *         )
-     *     ),
-     *     @OA\\Response(
-     *         response=401,
-     *         description="Неверный API ключ"
-     *     ),
-     *     @OA\\Response(
-     *         response=404,
-     *         description="Здание не найдено"
-     *     )
-     * )
+     * Получить организации в здании
      */',
              'namespace' => 'App\\Http\\Controllers\\Api',
              'uses' => 
             array (
               'controller' => 'App\\Http\\Controllers\\Controller',
+              'searcharearequest' => 'App\\Http\\Requests\\SearchAreaRequest',
+              'searchnamerequest' => 'App\\Http\\Requests\\SearchNameRequest',
+              'searchradiusrequest' => 'App\\Http\\Requests\\SearchRadiusRequest',
+              'apiresponse' => 'App\\Http\\Resources\\ApiResponse',
+              'organizationresource' => 'App\\Http\\Resources\\OrganizationResource',
               'activity' => 'App\\Models\\Activity',
-              'building' => 'App\\Models\\Building',
               'organization' => 'App\\Models\\Organization',
-              'request' => 'Illuminate\\Http\\Request',
               'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+              'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
             ),
              'constUses' => 
             array (
@@ -2295,26 +3084,30 @@ return [
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Получить список организаций по виду деятельности
-     * 
      * @OA\\Get(
-     *     path="/api/organizations/activity/{activityId}",
+     *     path="/organizations/activity/{activityId}",
      *     summary="Получить организации по виду деятельности",
+     *     description="Получить список организаций по виду деятельности",
      *     tags={"Organizations"},
-     *     security={{"apiKey":{}}},
+     *     security={{"api_key":{}}},
      *     @OA\\Parameter(
      *         name="activityId",
      *         in="path",
-     *         required=true,
      *         description="ID вида деятельности",
+     *         required=true,
      *         @OA\\Schema(type="integer")
      *     ),
      *     @OA\\Response(
      *         response=200,
      *         description="Успешный ответ",
      *         @OA\\JsonContent(
+     *             type="object",
      *             @OA\\Property(property="success", type="boolean", example=true),
-     *             @OA\\Property(property="data", type="array", @OA\\Items(ref="#/components/schemas/Organization"))
+     *             @OA\\Property(
+     *                 property="data",
+     *                 type="array",
+     *                 @OA\\Items(ref="#/components/schemas/Organization")
+     *             )
      *         )
      *     )
      * )
@@ -2323,11 +3116,15 @@ return [
              'uses' => 
             array (
               'controller' => 'App\\Http\\Controllers\\Controller',
+              'searcharearequest' => 'App\\Http\\Requests\\SearchAreaRequest',
+              'searchnamerequest' => 'App\\Http\\Requests\\SearchNameRequest',
+              'searchradiusrequest' => 'App\\Http\\Requests\\SearchRadiusRequest',
+              'apiresponse' => 'App\\Http\\Resources\\ApiResponse',
+              'organizationresource' => 'App\\Http\\Resources\\OrganizationResource',
               'activity' => 'App\\Models\\Activity',
-              'building' => 'App\\Models\\Building',
               'organization' => 'App\\Models\\Organization',
-              'request' => 'Illuminate\\Http\\Request',
               'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+              'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
             ),
              'constUses' => 
             array (
@@ -2364,40 +3161,44 @@ return [
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Поиск организаций в радиусе
-     * 
      * @OA\\Get(
-     *     path="/api/organizations/search/radius",
+     *     path="/organizations/search/radius",
      *     summary="Поиск организаций в радиусе",
+     *     description="Поиск организаций в радиусе",
      *     tags={"Organizations"},
-     *     security={{"apiKey":{}}},
+     *     security={{"api_key":{}}},
      *     @OA\\Parameter(
      *         name="latitude",
      *         in="query",
-     *         required=true,
      *         description="Широта центральной точки",
+     *         required=true,
      *         @OA\\Schema(type="number", format="float")
      *     ),
      *     @OA\\Parameter(
      *         name="longitude",
      *         in="query",
-     *         required=true,
      *         description="Долгота центральной точки",
+     *         required=true,
      *         @OA\\Schema(type="number", format="float")
      *     ),
      *     @OA\\Parameter(
      *         name="radius",
      *         in="query",
-     *         required=true,
      *         description="Радиус поиска в километрах",
+     *         required=true,
      *         @OA\\Schema(type="number", format="float")
      *     ),
      *     @OA\\Response(
      *         response=200,
      *         description="Успешный ответ",
      *         @OA\\JsonContent(
+     *             type="object",
      *             @OA\\Property(property="success", type="boolean", example=true),
-     *             @OA\\Property(property="data", type="array", @OA\\Items(ref="#/components/schemas/Organization"))
+     *             @OA\\Property(
+     *                 property="data",
+     *                 type="array",
+     *                 @OA\\Items(ref="#/components/schemas/Organization")
+     *             )
      *         )
      *     )
      * )
@@ -2406,11 +3207,15 @@ return [
              'uses' => 
             array (
               'controller' => 'App\\Http\\Controllers\\Controller',
+              'searcharearequest' => 'App\\Http\\Requests\\SearchAreaRequest',
+              'searchnamerequest' => 'App\\Http\\Requests\\SearchNameRequest',
+              'searchradiusrequest' => 'App\\Http\\Requests\\SearchRadiusRequest',
+              'apiresponse' => 'App\\Http\\Resources\\ApiResponse',
+              'organizationresource' => 'App\\Http\\Resources\\OrganizationResource',
               'activity' => 'App\\Models\\Activity',
-              'building' => 'App\\Models\\Building',
               'organization' => 'App\\Models\\Organization',
-              'request' => 'Illuminate\\Http\\Request',
               'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+              'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
             ),
              'constUses' => 
             array (
@@ -2428,7 +3233,7 @@ return [
             0 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'request',
-               'type' => 'Illuminate\\Http\\Request',
+               'type' => 'App\\Http\\Requests\\SearchRadiusRequest',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -2447,47 +3252,51 @@ return [
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Поиск организаций в прямоугольной области
-     * 
      * @OA\\Get(
-     *     path="/api/organizations/search/area",
+     *     path="/organizations/search/area",
      *     summary="Поиск организаций в прямоугольной области",
+     *     description="Поиск организаций в прямоугольной области",
      *     tags={"Organizations"},
-     *     security={{"apiKey":{}}},
+     *     security={{"api_key":{}}},
      *     @OA\\Parameter(
      *         name="min_lat",
      *         in="query",
-     *         required=true,
      *         description="Минимальная широта",
+     *         required=true,
      *         @OA\\Schema(type="number", format="float")
      *     ),
      *     @OA\\Parameter(
      *         name="max_lat",
      *         in="query",
-     *         required=true,
      *         description="Максимальная широта",
+     *         required=true,
      *         @OA\\Schema(type="number", format="float")
      *     ),
      *     @OA\\Parameter(
      *         name="min_lng",
      *         in="query",
-     *         required=true,
      *         description="Минимальная долгота",
+     *         required=true,
      *         @OA\\Schema(type="number", format="float")
      *     ),
      *     @OA\\Parameter(
      *         name="max_lng",
      *         in="query",
-     *         required=true,
      *         description="Максимальная долгота",
+     *         required=true,
      *         @OA\\Schema(type="number", format="float")
      *     ),
      *     @OA\\Response(
      *         response=200,
      *         description="Успешный ответ",
      *         @OA\\JsonContent(
+     *             type="object",
      *             @OA\\Property(property="success", type="boolean", example=true),
-     *             @OA\\Property(property="data", type="array", @OA\\Items(ref="#/components/schemas/Organization"))
+     *             @OA\\Property(
+     *                 property="data",
+     *                 type="array",
+     *                 @OA\\Items(ref="#/components/schemas/Organization")
+     *             )
      *         )
      *     )
      * )
@@ -2496,11 +3305,15 @@ return [
              'uses' => 
             array (
               'controller' => 'App\\Http\\Controllers\\Controller',
+              'searcharearequest' => 'App\\Http\\Requests\\SearchAreaRequest',
+              'searchnamerequest' => 'App\\Http\\Requests\\SearchNameRequest',
+              'searchradiusrequest' => 'App\\Http\\Requests\\SearchRadiusRequest',
+              'apiresponse' => 'App\\Http\\Resources\\ApiResponse',
+              'organizationresource' => 'App\\Http\\Resources\\OrganizationResource',
               'activity' => 'App\\Models\\Activity',
-              'building' => 'App\\Models\\Building',
               'organization' => 'App\\Models\\Organization',
-              'request' => 'Illuminate\\Http\\Request',
               'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+              'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
             ),
              'constUses' => 
             array (
@@ -2518,7 +3331,7 @@ return [
             0 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'request',
-               'type' => 'Illuminate\\Http\\Request',
+               'type' => 'App\\Http\\Requests\\SearchAreaRequest',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -2537,24 +3350,24 @@ return [
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Получить информацию об организации по ID
-     * 
      * @OA\\Get(
-     *     path="/api/organizations/{id}",
+     *     path="/organizations/{id}",
      *     summary="Получить организацию по ID",
+     *     description="Получить информацию об организации по ID",
      *     tags={"Organizations"},
-     *     security={{"apiKey":{}}},
+     *     security={{"api_key":{}}},
      *     @OA\\Parameter(
      *         name="id",
      *         in="path",
-     *         required=true,
      *         description="ID организации",
+     *         required=true,
      *         @OA\\Schema(type="integer")
      *     ),
      *     @OA\\Response(
      *         response=200,
      *         description="Успешный ответ",
      *         @OA\\JsonContent(
+     *             type="object",
      *             @OA\\Property(property="success", type="boolean", example=true),
      *             @OA\\Property(property="data", ref="#/components/schemas/Organization")
      *         )
@@ -2565,11 +3378,15 @@ return [
              'uses' => 
             array (
               'controller' => 'App\\Http\\Controllers\\Controller',
+              'searcharearequest' => 'App\\Http\\Requests\\SearchAreaRequest',
+              'searchnamerequest' => 'App\\Http\\Requests\\SearchNameRequest',
+              'searchradiusrequest' => 'App\\Http\\Requests\\SearchRadiusRequest',
+              'apiresponse' => 'App\\Http\\Resources\\ApiResponse',
+              'organizationresource' => 'App\\Http\\Resources\\OrganizationResource',
               'activity' => 'App\\Models\\Activity',
-              'building' => 'App\\Models\\Building',
               'organization' => 'App\\Models\\Organization',
-              'request' => 'Illuminate\\Http\\Request',
               'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+              'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
             ),
              'constUses' => 
             array (
@@ -2606,26 +3423,30 @@ return [
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Поиск организаций по виду деятельности (включая дочерние)
-     * 
      * @OA\\Get(
-     *     path="/api/organizations/search/activity-tree/{activityId}",
+     *     path="/organizations/search/activity-tree/{activityId}",
      *     summary="Поиск организаций по виду деятельности с дочерними",
+     *     description="Поиск организаций по виду деятельности (включая дочерние)",
      *     tags={"Organizations"},
-     *     security={{"apiKey":{}}},
+     *     security={{"api_key":{}}},
      *     @OA\\Parameter(
      *         name="activityId",
      *         in="path",
-     *         required=true,
      *         description="ID вида деятельности",
+     *         required=true,
      *         @OA\\Schema(type="integer")
      *     ),
      *     @OA\\Response(
      *         response=200,
      *         description="Успешный ответ",
      *         @OA\\JsonContent(
+     *             type="object",
      *             @OA\\Property(property="success", type="boolean", example=true),
-     *             @OA\\Property(property="data", type="array", @OA\\Items(ref="#/components/schemas/Organization"))
+     *             @OA\\Property(
+     *                 property="data",
+     *                 type="array",
+     *                 @OA\\Items(ref="#/components/schemas/Organization")
+     *             )
      *         )
      *     )
      * )
@@ -2634,11 +3455,15 @@ return [
              'uses' => 
             array (
               'controller' => 'App\\Http\\Controllers\\Controller',
+              'searcharearequest' => 'App\\Http\\Requests\\SearchAreaRequest',
+              'searchnamerequest' => 'App\\Http\\Requests\\SearchNameRequest',
+              'searchradiusrequest' => 'App\\Http\\Requests\\SearchRadiusRequest',
+              'apiresponse' => 'App\\Http\\Resources\\ApiResponse',
+              'organizationresource' => 'App\\Http\\Resources\\OrganizationResource',
               'activity' => 'App\\Models\\Activity',
-              'building' => 'App\\Models\\Building',
               'organization' => 'App\\Models\\Organization',
-              'request' => 'Illuminate\\Http\\Request',
               'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+              'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
             ),
              'constUses' => 
             array (
@@ -2675,26 +3500,30 @@ return [
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Поиск организаций по названию
-     * 
      * @OA\\Get(
-     *     path="/api/organizations/search/name",
+     *     path="/organizations/search/name",
      *     summary="Поиск организаций по названию",
+     *     description="Поиск организаций по названию",
      *     tags={"Organizations"},
-     *     security={{"apiKey":{}}},
+     *     security={{"api_key":{}}},
      *     @OA\\Parameter(
      *         name="name",
      *         in="query",
-     *         required=true,
      *         description="Название организации",
+     *         required=true,
      *         @OA\\Schema(type="string")
      *     ),
      *     @OA\\Response(
      *         response=200,
      *         description="Успешный ответ",
      *         @OA\\JsonContent(
+     *             type="object",
      *             @OA\\Property(property="success", type="boolean", example=true),
-     *             @OA\\Property(property="data", type="array", @OA\\Items(ref="#/components/schemas/Organization"))
+     *             @OA\\Property(
+     *                 property="data",
+     *                 type="array",
+     *                 @OA\\Items(ref="#/components/schemas/Organization")
+     *             )
      *         )
      *     )
      * )
@@ -2703,11 +3532,15 @@ return [
              'uses' => 
             array (
               'controller' => 'App\\Http\\Controllers\\Controller',
+              'searcharearequest' => 'App\\Http\\Requests\\SearchAreaRequest',
+              'searchnamerequest' => 'App\\Http\\Requests\\SearchNameRequest',
+              'searchradiusrequest' => 'App\\Http\\Requests\\SearchRadiusRequest',
+              'apiresponse' => 'App\\Http\\Resources\\ApiResponse',
+              'organizationresource' => 'App\\Http\\Resources\\OrganizationResource',
               'activity' => 'App\\Models\\Activity',
-              'building' => 'App\\Models\\Building',
               'organization' => 'App\\Models\\Organization',
-              'request' => 'Illuminate\\Http\\Request',
               'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+              'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
             ),
              'constUses' => 
             array (
@@ -2725,7 +3558,7 @@ return [
             0 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'request',
-               'type' => 'Illuminate\\Http\\Request',
+               'type' => 'App\\Http\\Requests\\SearchNameRequest',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -2733,57 +3566,6 @@ return [
               array (
               ),
             )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        7 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'getBuildings',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Получить все здания
-     * 
-     * @OA\\Get(
-     *     path="/api/buildings",
-     *     summary="Получить все здания",
-     *     tags={"Buildings"},
-     *     security={{"apiKey":{}}},
-     *     @OA\\Response(
-     *         response=200,
-     *         description="Успешный ответ",
-     *         @OA\\JsonContent(
-     *             @OA\\Property(property="success", type="boolean", example=true),
-     *             @OA\\Property(property="data", type="array", @OA\\Items(ref="#/components/schemas/Building"))
-     *         )
-     *     )
-     * )
-     */',
-             'namespace' => 'App\\Http\\Controllers\\Api',
-             'uses' => 
-            array (
-              'controller' => 'App\\Http\\Controllers\\Controller',
-              'activity' => 'App\\Models\\Activity',
-              'building' => 'App\\Models\\Building',
-              'organization' => 'App\\Models\\Organization',
-              'request' => 'Illuminate\\Http\\Request',
-              'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'Illuminate\\Http\\JsonResponse',
-           'parameters' => 
-          array (
           ),
            'attributes' => 
           array (
@@ -2886,6 +3668,1081 @@ return [
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'next',
                'type' => 'Closure',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Http/Requests/SearchAreaRequest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Requests\\SearchAreaRequest',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Foundation\\Http\\FormRequest',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'authorize',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Determine if the user is authorized to make this request.
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'rules',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, \\Illuminate\\Contracts\\Validation\\ValidationRule|array<mixed>|string>
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'messages',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get custom messages for validator errors.
+     *
+     * @return array<string, string>
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'failedValidation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Handle a failed validation attempt.
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'validator',
+               'type' => 'Illuminate\\Contracts\\Validation\\Validator',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Http/Requests/SearchNameRequest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Requests\\SearchNameRequest',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Foundation\\Http\\FormRequest',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'authorize',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Determine if the user is authorized to make this request.
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'rules',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, \\Illuminate\\Contracts\\Validation\\ValidationRule|array<mixed>|string>
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'messages',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get custom messages for validator errors.
+     *
+     * @return array<string, string>
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'failedValidation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Handle a failed validation attempt.
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'validator',
+               'type' => 'Illuminate\\Contracts\\Validation\\Validator',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Http/Requests/SearchRadiusRequest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Requests\\SearchRadiusRequest',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Foundation\\Http\\FormRequest',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'authorize',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Determine if the user is authorized to make this request.
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'rules',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, \\Illuminate\\Contracts\\Validation\\ValidationRule|array<mixed>|string>
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'messages',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get custom messages for validator errors.
+     *
+     * @return array<string, string>
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'failedValidation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Handle a failed validation attempt.
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'validator',
+               'type' => 'Illuminate\\Contracts\\Validation\\Validator',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Http/Resources/ActivityResource.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Resources\\ActivityResource',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Http\\Resources\\Json\\JsonResource',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'toArray',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Transform the resource into an array.
+     *
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Http\\Resources',
+             'uses' => 
+            array (
+              'request' => 'Illuminate\\Http\\Request',
+              'jsonresource' => 'Illuminate\\Http\\Resources\\Json\\JsonResource',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Http/Resources/ApiResponse.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Resources\\ApiResponse',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'success',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Успешный ответ с данными
+     */',
+             'namespace' => 'App\\Http\\Resources',
+             'uses' => 
+            array (
+              'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+              'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Illuminate\\Http\\JsonResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'data',
+               'type' => NULL,
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'collection',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Успешный ответ с коллекцией ресурсов
+     */',
+             'namespace' => 'App\\Http\\Resources',
+             'uses' => 
+            array (
+              'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+              'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Illuminate\\Http\\JsonResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'collection',
+               'type' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'error',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Ответ с ошибкой
+     */',
+             'namespace' => 'App\\Http\\Resources',
+             'uses' => 
+            array (
+              'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+              'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Illuminate\\Http\\JsonResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'status',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'errors',
+               'type' => NULL,
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'notFound',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Ответ "не найдено"
+     */',
+             'namespace' => 'App\\Http\\Resources',
+             'uses' => 
+            array (
+              'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+              'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Illuminate\\Http\\JsonResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'validationError',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Ответ с ошибкой валидации
+     */',
+             'namespace' => 'App\\Http\\Resources',
+             'uses' => 
+            array (
+              'jsonresponse' => 'Illuminate\\Http\\JsonResponse',
+              'anonymousresourcecollection' => 'Illuminate\\Http\\Resources\\Json\\AnonymousResourceCollection',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Illuminate\\Http\\JsonResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'errors',
+               'type' => NULL,
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Http/Resources/BuildingResource.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Resources\\BuildingResource',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Http\\Resources\\Json\\JsonResource',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'toArray',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Transform the resource into an array.
+     *
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Http\\Resources',
+             'uses' => 
+            array (
+              'request' => 'Illuminate\\Http\\Request',
+              'jsonresource' => 'Illuminate\\Http\\Resources\\Json\\JsonResource',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Http/Resources/OrganizationPhoneResource.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Resources\\OrganizationPhoneResource',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Http\\Resources\\Json\\JsonResource',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'toArray',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Transform the resource into an array.
+     *
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Http\\Resources',
+             'uses' => 
+            array (
+              'request' => 'Illuminate\\Http\\Request',
+              'jsonresource' => 'Illuminate\\Http\\Resources\\Json\\JsonResource',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Http/Resources/OrganizationResource.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Resources\\OrganizationResource',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Http\\Resources\\Json\\JsonResource',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'toArray',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Transform the resource into an array.
+     *
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Http\\Resources',
+             'uses' => 
+            array (
+              'request' => 'Illuminate\\Http\\Request',
+              'jsonresource' => 'Illuminate\\Http\\Resources\\Json\\JsonResource',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,

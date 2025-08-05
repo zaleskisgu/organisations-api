@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\OrganizationController;
+use App\Http\Controllers\Api\BuildingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,9 @@ use App\Http\Controllers\Api\OrganizationController;
 |
 */
 
-// API документация
+// API документация - Swagger UI
 Route::get('/documentation', function () {
-    return view('api-documentation');
+    return view('swagger-ui');
 });
 
 // JSON документация
@@ -52,27 +53,17 @@ Route::get('/test', function () {
 });
 
 Route::middleware('api.key')->group(function () {
-    // Получить список всех организаций в конкретном здании
+    // Buildings
+    Route::get('/buildings', [BuildingController::class, 'index']);
+    
+    // Organizations
     Route::get('/organizations/building/{buildingId}', [OrganizationController::class, 'getByBuilding']);
-    
-    // Получить список организаций по виду деятельности
     Route::get('/organizations/activity/{activityId}', [OrganizationController::class, 'getByActivity']);
-    
-    // Поиск организаций в радиусе
-    Route::get('/organizations/search/radius', [OrganizationController::class, 'searchByRadius']);
-    
-    // Поиск организаций в прямоугольной области
-    Route::get('/organizations/search/area', [OrganizationController::class, 'searchByArea']);
-    
-    // Получить информацию об организации по ID
     Route::get('/organizations/{id}', [OrganizationController::class, 'show']);
     
-    // Поиск организаций по виду деятельности (включая дочерние)
+    // Search
+    Route::get('/organizations/search/radius', [OrganizationController::class, 'searchByRadius']);
+    Route::get('/organizations/search/area', [OrganizationController::class, 'searchByArea']);
     Route::get('/organizations/search/activity-tree/{activityId}', [OrganizationController::class, 'searchByActivityTree']);
-    
-    // Поиск организаций по названию
     Route::get('/organizations/search/name', [OrganizationController::class, 'searchByName']);
-    
-    // Получить все здания
-    Route::get('/buildings', [OrganizationController::class, 'getBuildings']);
 }); 

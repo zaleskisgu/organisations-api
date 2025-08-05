@@ -51,6 +51,8 @@ class ApiTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertJsonStructure([
+            'success',
+            'message',
             'data' => [
                 '*' => [
                     'id',
@@ -78,6 +80,8 @@ class ApiTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertJsonStructure([
+            'success',
+            'message',
             'data' => [
                 '*' => [
                     'id',
@@ -127,6 +131,8 @@ class ApiTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertJsonStructure([
+            'success',
+            'message',
             'data' => [
                 '*' => [
                     'id',
@@ -159,6 +165,8 @@ class ApiTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertJsonStructure([
+            'success',
+            'message',
             'data' => [
                 '*' => [
                     'id',
@@ -172,10 +180,12 @@ class ApiTest extends TestCase
         ]);
 
         // Test without parameters
-        $response = $this->withHeaders(['X-API-Key' => $this->apiKey])
-            ->get('/api/organizations/search/radius');
+        $response = $this->withHeaders([
+            'X-API-Key' => $this->apiKey,
+            'Accept' => 'application/json'
+        ])->get('/api/organizations/search/radius');
 
-        $response->assertStatus(400);
+        $response->assertStatus(422);
     }
 
     /**
@@ -189,6 +199,8 @@ class ApiTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertJsonStructure([
+            'success',
+            'message',
             'data' => [
                 '*' => [
                     'id',
@@ -202,10 +214,12 @@ class ApiTest extends TestCase
         ]);
 
         // Test without parameters
-        $response = $this->withHeaders(['X-API-Key' => $this->apiKey])
-            ->get('/api/organizations/search/area');
+        $response = $this->withHeaders([
+            'X-API-Key' => $this->apiKey,
+            'Accept' => 'application/json'
+        ])->get('/api/organizations/search/area');
 
-        $response->assertStatus(400);
+        $response->assertStatus(422);
     }
 
     /**
@@ -219,6 +233,8 @@ class ApiTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertJsonStructure([
+            'success',
+            'message',
             'data' => [
                 'id',
                 'name',
@@ -264,6 +280,8 @@ class ApiTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertJsonStructure([
+            'success',
+            'message',
             'data' => [
                 '*' => [
                     'id',
@@ -296,6 +314,8 @@ class ApiTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertJsonStructure([
+            'success',
+            'message',
             'data' => [
                 '*' => [
                     'id',
@@ -309,10 +329,12 @@ class ApiTest extends TestCase
         ]);
 
         // Test without name parameter
-        $response = $this->withHeaders(['X-API-Key' => $this->apiKey])
-            ->get('/api/organizations/search/name');
+        $response = $this->withHeaders([
+            'X-API-Key' => $this->apiKey,
+            'Accept' => 'application/json'
+        ])->get('/api/organizations/search/name');
 
-        $response->assertStatus(400);
+        $response->assertStatus(422);
 
         // Test with non-existent name
         $response = $this->withHeaders(['X-API-Key' => $this->apiKey])
@@ -329,10 +351,12 @@ class ApiTest extends TestCase
     public function test_radius_search_edge_cases()
     {
         // Test with invalid coordinates
-        $response = $this->withHeaders(['X-API-Key' => $this->apiKey])
-            ->get('/api/organizations/search/radius?latitude=invalid&longitude=invalid&radius=5');
+        $response = $this->withHeaders([
+            'X-API-Key' => $this->apiKey,
+            'Accept' => 'application/json'
+        ])->get('/api/organizations/search/radius?latitude=invalid&longitude=invalid&radius=5');
 
-        $response->assertStatus(400);
+        $response->assertStatus(422);
 
         // Test with very large radius
         $response = $this->withHeaders(['X-API-Key' => $this->apiKey])
@@ -347,10 +371,12 @@ class ApiTest extends TestCase
     public function test_area_search_edge_cases()
     {
         // Test with invalid coordinates
-        $response = $this->withHeaders(['X-API-Key' => $this->apiKey])
-            ->get('/api/organizations/search/area?min_lat=invalid&max_lat=invalid&min_lng=invalid&max_lng=invalid');
+        $response = $this->withHeaders([
+            'X-API-Key' => $this->apiKey,
+            'Accept' => 'application/json'
+        ])->get('/api/organizations/search/area?min_lat=invalid&max_lat=invalid&min_lng=invalid&max_lng=invalid');
 
-        $response->assertStatus(400);
+        $response->assertStatus(422);
 
         // Test with very large area
         $response = $this->withHeaders(['X-API-Key' => $this->apiKey])
@@ -389,6 +415,8 @@ class ApiTest extends TestCase
             ->get('/api/buildings');
 
         $response->assertJsonStructure([
+            'success',
+            'message',
             'data' => [
                 '*' => [
                     'id',
@@ -405,6 +433,8 @@ class ApiTest extends TestCase
             ->get('/api/organizations/1');
 
         $response->assertJsonStructure([
+            'success',
+            'message',
             'data' => [
                 'id',
                 'name',

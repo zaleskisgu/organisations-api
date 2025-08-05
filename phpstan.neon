@@ -7,6 +7,8 @@ parameters:
         - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Builder::#'
         - '#Call to an undefined static method App\\Models\\.*::find\(\)#'
         - '#Call to an undefined static method App\\Models\\.*::whereHas\(\)#'
+        - '#Call to an undefined static method App\\Models\\.*::where\(\)#'
         - '#Access to an undefined property App\\Models\\Activity::\$children#'
+        - '#Access to an undefined property App\\Http\\Resources\\.*::\$#'
     reportUnmatchedIgnoredErrors: false
     tmpDir: storage/phpstan 

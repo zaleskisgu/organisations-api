@@ -22,7 +22,7 @@
                     "Buildings"
                 ],
                 "summary": "Получить все здания",
-                "operationId": "cc3e0a67bf1e3f9c0d949a59bde04808",
+                "operationId": "dd5910a076ea40e62974dedcb5abacb8",
                 "responses": {
                     "200": {
                         "description": "Список всех зданий",
@@ -37,25 +37,7 @@
                                         "data": {
                                             "type": "array",
                                             "items": {
-                                                "properties": {
-                                                    "id": {
-                                                        "type": "integer",
-                                                        "example": 1
-                                                    },
-                                                    "address": {
-                                                        "type": "string",
-                                                        "example": "г. Москва, ул. Ленина 1, офис 3"
-                                                    },
-                                                    "latitude": {
-                                                        "type": "string",
-                                                        "example": "55.75580000"
-                                                    },
-                                                    "longitude": {
-                                                        "type": "string",
-                                                        "example": "37.61760000"
-                                                    }
-                                                },
-                                                "type": "object"
+                                                "$ref": "#/components/schemas/Building"
                                             }
                                         }
                                     },
@@ -75,14 +57,14 @@
                 ]
             }
         },
-        "/api/organizations/building/{buildingId}": {
+        "/organizations/building/{buildingId}": {
             "get": {
                 "tags": [
                     "Organizations"
                 ],
                 "summary": "Получить организации в здании",
                 "description": "Получить список всех организаций в конкретном здании",
-                "operationId": "4a27e095a6c8752e92df909c27d7df6e",
+                "operationId": "85e1ffd018f1a7fbd5566cf74d3cceda",
                 "parameters": [
                     {
                         "name": "buildingId",
@@ -126,19 +108,19 @@
                 },
                 "security": [
                     {
-                        "apiKey": []
+                        "api_key": []
                     }
                 ]
             }
         },
-        "/api/organizations/activity/{activityId}": {
+        "/organizations/activity/{activityId}": {
             "get": {
                 "tags": [
                     "Organizations"
                 ],
                 "summary": "Получить организации по виду деятельности",
                 "description": "Получить список организаций по виду деятельности",
-                "operationId": "b03a17d26be10f29616d8ada20c9a360",
+                "operationId": "fd1935de61366109c1008c5eb8d92bc8",
                 "parameters": [
                     {
                         "name": "activityId",
@@ -176,19 +158,19 @@
                 },
                 "security": [
                     {
-                        "apiKey": []
+                        "api_key": []
                     }
                 ]
             }
         },
-        "/api/organizations/search/radius": {
+        "/organizations/search/radius": {
             "get": {
                 "tags": [
                     "Organizations"
                 ],
                 "summary": "Поиск организаций в радиусе",
                 "description": "Поиск организаций в радиусе",
-                "operationId": "69262af8dba45b52578805378e428f63",
+                "operationId": "e17902db6279db13576b5ef377cb4168",
                 "parameters": [
                     {
                         "name": "latitude",
@@ -247,19 +229,19 @@
                 },
                 "security": [
                     {
-                        "apiKey": []
+                        "api_key": []
                     }
                 ]
             }
         },
-        "/api/organizations/search/area": {
+        "/organizations/search/area": {
             "get": {
                 "tags": [
                     "Organizations"
                 ],
                 "summary": "Поиск организаций в прямоугольной области",
                 "description": "Поиск организаций в прямоугольной области",
-                "operationId": "a309549e5fe59317a037a898211859b9",
+                "operationId": "459fe80d959e9eff937642c0f683183a",
                 "parameters": [
                     {
                         "name": "min_lat",
@@ -328,19 +310,19 @@
                 },
                 "security": [
                     {
-                        "apiKey": []
+                        "api_key": []
                     }
                 ]
             }
         },
-        "/api/organizations/{id}": {
+        "/organizations/{id}": {
             "get": {
                 "tags": [
                     "Organizations"
                 ],
                 "summary": "Получить организацию по ID",
                 "description": "Получить информацию об организации по ID",
-                "operationId": "11826ee077ae441c61f2bee8476e2a14",
+                "operationId": "3b641b1670623b572d4c510217881de0",
                 "parameters": [
                     {
                         "name": "id",
@@ -375,19 +357,19 @@
                 },
                 "security": [
                     {
-                        "apiKey": []
+                        "api_key": []
                     }
                 ]
             }
         },
-        "/api/organizations/search/activity-tree/{activityId}": {
+        "/organizations/search/activity-tree/{activityId}": {
             "get": {
                 "tags": [
                     "Organizations"
                 ],
                 "summary": "Поиск организаций по виду деятельности с дочерними",
                 "description": "Поиск организаций по виду деятельности (включая дочерние)",
-                "operationId": "55a78942c662746524aae220e0e70969",
+                "operationId": "f8d47722985de7fc61b01e017886ffa6",
                 "parameters": [
                     {
                         "name": "activityId",
@@ -425,19 +407,19 @@
                 },
                 "security": [
                     {
-                        "apiKey": []
+                        "api_key": []
                     }
                 ]
             }
         },
-        "/api/organizations/search/name": {
+        "/organizations/search/name": {
             "get": {
                 "tags": [
                     "Organizations"
                 ],
                 "summary": "Поиск организаций по названию",
                 "description": "Поиск организаций по названию",
-                "operationId": "93b4e6ec0d1bfe63ef8aa56a800698f7",
+                "operationId": "74d7ecd1966659ce4920f33a1c4020d9",
                 "parameters": [
                     {
                         "name": "name",
@@ -475,46 +457,7 @@
                 },
                 "security": [
                     {
-                        "apiKey": []
-                    }
-                ]
-            }
-        },
-        "/api/buildings": {
-            "get": {
-                "tags": [
-                    "Buildings"
-                ],
-                "summary": "Получить все здания",
-                "description": "Получить все здания",
-                "operationId": "8a81f8449d5e0db1a25aa2df94f6b16e",
-                "responses": {
-                    "200": {
-                        "description": "Успешный ответ",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "success": {
-                                            "type": "boolean",
-                                            "example": true
-                                        },
-                                        "data": {
-                                            "type": "array",
-                                            "items": {
-                                                "$ref": "#/components/schemas/Building"
-                                            }
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    }
-                },
-                "security": [
-                    {
-                        "apiKey": []
+                        "api_key": []
                     }
                 ]
             }

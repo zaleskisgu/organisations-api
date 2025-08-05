@@ -7,7 +7,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
   array (
     '/var/www/tests/Feature/ApiTest.php' => 
     array (
-      0 => 'ffe95221f7a78cea456f32f4e2916b33fc927f62',
+      0 => '7953cee7d2c3411e0296fd03b448a261b7deb336',
       1 => 
       array (
         0 => 'tests\\feature\\apitest',
